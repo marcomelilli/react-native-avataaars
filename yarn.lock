@@ -30,9 +30,9 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"avataars@https://github.com/JacobDel/avataaars#master":
-  version "2.0.0"
-  resolved "https://github.com/JacobDel/avataaars#80553c23923d269e2f732b7151befcb4b31de903"
+"avataaars@https://github.com/JacobDel/avataaars#2.1.0":
+  version "2.1.0"
+  resolved "https://github.com/JacobDel/avataaars#9bf93ecc50de39ed768b122c521157d8a91b67f2"
   dependencies:
     lodash ">=4.17.21"
     prop-types "^15.7.2"

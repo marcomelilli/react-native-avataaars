@@ -26,7 +26,7 @@
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "avataaars": "https://github.com/JacobDel/avataaars#master",
+    "avataaars": "https://github.com/JacobDel/avataaars#2.1.0",
     "react-native-remote-svg": "2.0.10"
   }
 }
