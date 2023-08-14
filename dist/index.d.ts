@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 export interface Props {
     avatarStyle: string;
     size: number;
@@ -17,9 +17,5 @@ export interface Props {
     pieceType?: string;
     pieceSize?: string;
 }
-export declare class Avatar extends React.Component<Props> {
-    render(): JSX.Element;
-}
-export declare class Piece extends React.Component<Props> {
-    render(): JSX.Element;
-}
+export declare const Avatar: React.MemoExoticComponent<(props: Props) => React.JSX.Element>;
+export declare const Piece: React.MemoExoticComponent<(props: Props) => React.JSX.Element>;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { PixelRatio } from "react-native";
 import ReactDOMServer from "react-dom/server";
 import Image from "react-native-remote-svg";
