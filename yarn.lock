@@ -44,9 +44,9 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
   integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
 
-"avataaars@https://github.com/JacobDel/avataaars#2.1.3":
+"avataaars@https://github.com/JacobDel/avataaars#2.1.4":
   version "2.1.3"
-  resolved "https://github.com/JacobDel/avataaars#86dbb5f47689001ab8f1d6c9ecdbc324eadd6e74"
+  resolved "https://github.com/JacobDel/avataaars#c09ae93928cd3abd38bd0f3e648ed856e0488c27"
   dependencies:
     lodash ">=4.17.21"
     prop-types "^15.7.2"
