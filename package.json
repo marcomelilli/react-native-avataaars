@@ -19,6 +19,9 @@
   },
   "author": "Tommy Chung <tom555my@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "rm dist/* && tsc"
+  },
   "devDependencies": {
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
