@@ -13,7 +13,7 @@ import React from "react";
 import { PixelRatio } from "react-native";
 import ReactDOMServer from "react-dom/server";
 import Image from "react-native-remote-svg";
-import { default as AvatarReact, Piece as PieceReact } from "avataaars";
+import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
     return (React.createElement(Image, { source: {
