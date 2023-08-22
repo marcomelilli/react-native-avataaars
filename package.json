@@ -24,10 +24,10 @@
     "build": "rm dist/* && tsc"
   },
   "devDependencies": {
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "@types/react-native": "^0.57.26",
-    "typescript": "^3.2.2"
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-native": "^0.72.2",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "avataaars": "https://github.com/JacobDel/avataaars#2.2.0",
