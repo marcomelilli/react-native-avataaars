@@ -27,13 +27,12 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/react-native": "^0.57.26",
-    "typescript": "^3.2.2",
+    "typescript": "^5.1.6",
     "react": "^18.1.0",
-    "react-native": "^0.70.6",
-    "react-native-webview": "^12.0.2"
+    "react-native": "^0.70.6"
   },
   "dependencies": {
-    "avataaars": "https://github.com/JacobDel/avataaars#2.2.1",
-    "react-native-remote-svg": "2.0.10"
+    "react-native-remote-svg": "2.0.10",
+    "react-native-webview": "^12.0.2"
   }
 }
