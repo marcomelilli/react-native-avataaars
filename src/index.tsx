@@ -55,20 +55,20 @@ export const Avatar = React.memo((props: Props) => {
   );
 });
 
-export const Piece = React.memo((props: Props) => {
-  const { pieceSize } = props;
+// export const Piece = React.memo((props: Props) => {
+//   const { pieceSize } = props;
 
-  const svgString = renderToString(<PieceReact {...props} />);
+//   const svgString = renderToString(<PieceReact {...props} />);
 
-  return (
-    <Image
-      source={{
-        uri: `data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`,
-      }}
-      style={{
-        width: Number(pieceSize),
-        height: Number(pieceSize),
-      }}
-    />
-  );
-});
+//   return (
+//     <Image
+//       source={{
+//         uri: `data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`,
+//       }}
+//       style={{
+//         width: Number(pieceSize),
+//         height: Number(pieceSize),
+//       }}
+//     />
+//   );
+// });
