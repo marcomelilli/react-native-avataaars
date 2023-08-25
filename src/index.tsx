@@ -46,8 +46,6 @@ export const Avatar = React.memo((props: Props) => {
 
   return (
     <>
-      <SvgCss xml={encodedSvgString} width={size} height={size} />
-      <SvgCssUri uri={encodedSvgString} width={size} height={size} />
       <SvgXml xml={svgString} width={size} height={size} />
     </>
   );
