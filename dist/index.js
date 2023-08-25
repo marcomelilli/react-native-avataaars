@@ -14,6 +14,7 @@ import './globals.js';
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
 import Image from "react-native-remote-svg";
+import { SvgXml } from 'react-native-svg';
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
@@ -23,12 +24,7 @@ export var Avatar = React.memo(function (props) {
         } }, props)));
     var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString));
     console.log(encodedSvgString);
-    return (React.createElement(Image, { source: {
-            uri: encodedSvgString,
-        }, style: {
-            width: size,
-            height: size,
-        } }));
+    return (React.createElement(SvgXml, { xml: encodedSvgString, width: "100%", height: "100%" }));
 });
 export var Piece = React.memo(function (props) {
     var pieceSize = props.pieceSize;

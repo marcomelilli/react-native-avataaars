@@ -4,6 +4,7 @@ import { View } from "react-native";
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
 import Image from "react-native-remote-svg";
+import { SvgXml } from 'react-native-svg';
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
 
 export interface Props {
@@ -46,14 +47,10 @@ export const Avatar = React.memo((props: Props) => {
   console.log(encodedSvgString);
 
   return (
-    <Image
-      source={{
-        uri: encodedSvgString,
-      }}
-      style={{
-        width: size,
-        height: size,
-      }}
+    <SvgXml
+      xml={encodedSvgString}
+      width="100%"
+	  height="100%"
     />
   );
 });
