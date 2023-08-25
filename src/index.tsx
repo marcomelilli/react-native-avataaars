@@ -1,4 +1,5 @@
 import React from "react";
+import './globals.js'; // https://github.com/facebook/hermes/issues/948#issuecomment-1484240071
 import { View } from "react-native";
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";

@@ -10,6 +10,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import React from "react";
+import './globals.js';
 import { renderToString } from "react-dom/server";
 import Image from "react-native-remote-svg";
 import { Piece as PieceReact } from "avataaars";

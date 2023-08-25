@@ -1,4 +1,5 @@
 import React from "react";
+import './globals.js';
 export interface Props {
     avatarStyle: string;
     size: number;
