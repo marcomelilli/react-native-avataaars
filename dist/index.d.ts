@@ -18,4 +18,3 @@ export interface Props {
     pieceSize?: string;
 }
 export declare const Avatar: React.MemoExoticComponent<(props: Props) => React.JSX.Element>;
-export declare const Piece: React.MemoExoticComponent<(props: Props) => React.JSX.Element>;
