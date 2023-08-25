@@ -9,11 +9,11 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from "react";
+import * as React from 'react';
+import { SvgXml } from 'react-native-svg';
 import './globals.js';
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
-import * as Svg from 'react-native-svg';
 import { Avatar as AvatarReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
@@ -21,7 +21,7 @@ export var Avatar = React.memo(function (props) {
             width: PixelRatio.getPixelSizeForLayoutSize(size),
             height: PixelRatio.getPixelSizeForLayoutSize(size),
         } }, props)));
-    var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString));
+    var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString)).toString();
     console.log(encodedSvgString);
-    return (React.createElement(Svg.SvgXml, { xml: encodedSvgString, width: "100%", height: "100%" }));
+    return (React.createElement(SvgXml, { xml: encodedSvgString, width: "100%", height: "100%" }));
 });

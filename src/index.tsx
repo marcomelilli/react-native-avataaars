@@ -1,10 +1,9 @@
-import React from "react";
+import * as React from 'react';
+import { SvgXml } from 'react-native-svg';
+
 import './globals.js'; // https://github.com/facebook/hermes/issues/948#issuecomment-1484240071
-import { View } from "react-native";
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
-import Image from "react-native-remote-svg";
-import * as Svg from 'react-native-svg';
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
 
 export interface Props {
@@ -42,12 +41,12 @@ export const Avatar = React.memo((props: Props) => {
 
   const encodedSvgString = `data:image/svg+xml;utf8,${encodeURIComponent(
     svgString
-  )}`;
+  )}`.toString();
 
   console.log(encodedSvgString);
 
   return (
-    <Svg.SvgXml
+    <SvgXml
       xml={encodedSvgString}
       width="100%"
 	  height="100%"
