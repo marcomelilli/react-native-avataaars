@@ -48,8 +48,8 @@ export const Avatar = React.memo((props: Props) => {
   return (
     <SvgXml
       xml={encodedSvgString}
-      width="100%"
-	  height="100%"
+      width={size}
+	  height={size}
     />
   );
 });
