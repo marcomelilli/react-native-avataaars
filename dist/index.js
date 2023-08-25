@@ -17,9 +17,11 @@ import { renderToString } from "react-dom/server";
 import { Avatar as AvatarReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
-    var svgString = renderToString(React.createElement(AvatarReact, __assign({ style: {
+    var avatar = React.useMemo(function () { return (React.createElement(AvatarReact, __assign({ style: {
             width: PixelRatio.getPixelSizeForLayoutSize(size),
             height: PixelRatio.getPixelSizeForLayoutSize(size),
-        } }, props)));
-    return React.createElement(SvgXml, { xml: svgString, width: '100%', height: '100%' });
+        } }, props))); }, [props]);
+    var svgString = renderToString(avatar);
+    console.log(svgString);
+    return React.createElement(SvgXml, { xml: svgString, width: "100%", height: "100%" });
 });

@@ -28,15 +28,23 @@ export interface Props {
 export const Avatar = React.memo((props: Props) => {
   const { size } = props;
 
-  const svgString = renderToString(
-    <AvatarReact
-      style={{
-        width: PixelRatio.getPixelSizeForLayoutSize(size),
-        height: PixelRatio.getPixelSizeForLayoutSize(size),
-      }}
-      {...props}
-    />
+  const avatar = React.useMemo(
+    () => (
+      <AvatarReact
+        style={{
+          width: PixelRatio.getPixelSizeForLayoutSize(size),
+          height: PixelRatio.getPixelSizeForLayoutSize(size),
+        }}
+        {...props}
+      />
+    ),
+    [props]
   );
+
+  const svgString = renderToString(avatar);
+
+
+  console.log(svgString);
 
   // const encodedSvgString = `data:image/svg+xml;utf8,${encodeURIComponent(
   //   svgString
@@ -44,7 +52,7 @@ export const Avatar = React.memo((props: Props) => {
 
   // console.log(encodedSvgString);
 
-  return <SvgXml xml={svgString} width={'100%'} height={'100%'} />;
+  return <SvgXml xml={svgString} width={"100%"} height={"100%"} />;
 });
 
 // export const Piece = React.memo((props: Props) => {
