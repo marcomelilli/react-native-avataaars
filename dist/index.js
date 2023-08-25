@@ -10,7 +10,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import * as React from 'react';
-import { SvgXml } from 'react-native-svg';
+import { SvgCss } from 'react-native-svg';
 import './globals.js';
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
@@ -23,5 +23,5 @@ export var Avatar = React.memo(function (props) {
         } }, props)));
     var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString)).toString();
     console.log(encodedSvgString);
-    return (React.createElement(SvgXml, { xml: encodedSvgString, width: size, height: size }));
+    return (React.createElement(SvgCss, { xml: encodedSvgString, width: size, height: size }));
 });

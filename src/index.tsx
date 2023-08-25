@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SvgXml } from 'react-native-svg';
+import { SvgXml, SvgCss } from 'react-native-svg';
 
 import './globals.js'; // https://github.com/facebook/hermes/issues/948#issuecomment-1484240071
 import { PixelRatio } from "react-native";
@@ -46,7 +46,7 @@ export const Avatar = React.memo((props: Props) => {
   console.log(encodedSvgString);
 
   return (
-    <SvgXml
+    <SvgCss
       xml={encodedSvgString}
       width={size}
 	  height={size}
