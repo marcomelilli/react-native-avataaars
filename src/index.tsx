@@ -29,14 +29,14 @@ export const Avatar = React.memo((props: Props) => {
   const { size } = props;
 
   const svgString = renderToString(
-    //   <AvatarReact
-    // 	style={{
-    // 	  width: PixelRatio.getPixelSizeForLayoutSize(size),
-    // 	  height: PixelRatio.getPixelSizeForLayoutSize(size),
-    // 	}}
-    // 	{...props}
-    //   />
-    <div style={{ width: 100, height: 100, backgroundColor: "pink" }} />
+      <AvatarReact
+    	style={{
+    	  width: PixelRatio.getPixelSizeForLayoutSize(size),
+    	  height: PixelRatio.getPixelSizeForLayoutSize(size),
+    	}}
+    	{...props}
+      />
+    // <div style={{ width: 100, height: 100, backgroundColor: "pink" }} />
   );
 
   const encodedSvgString = `data:image/svg+xml;utf8,${encodeURIComponent(
