@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { SvgXml, SvgCss } from 'react-native-svg';
+import * as React from "react";
+import { SvgXml, SvgCss, SvgUri, SvgCssUri } from "react-native-svg";
 
-import './globals.js'; // https://github.com/facebook/hermes/issues/948#issuecomment-1484240071
+import "./globals.js"; // https://github.com/facebook/hermes/issues/948#issuecomment-1484240071
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
@@ -29,14 +29,13 @@ export const Avatar = React.memo((props: Props) => {
   const { size } = props;
 
   const svgString = renderToString(
-      <AvatarReact
-    	style={{
-    	  width: PixelRatio.getPixelSizeForLayoutSize(size),
-    	  height: PixelRatio.getPixelSizeForLayoutSize(size),
-    	}}
-    	{...props}
-      />
-    // <div style={{ width: 100, height: 100, backgroundColor: "pink" }} />
+    <AvatarReact
+      style={{
+        width: PixelRatio.getPixelSizeForLayoutSize(size),
+        height: PixelRatio.getPixelSizeForLayoutSize(size),
+      }}
+      {...props}
+    />
   );
 
   const encodedSvgString = `data:image/svg+xml;utf8,${encodeURIComponent(
@@ -46,11 +45,11 @@ export const Avatar = React.memo((props: Props) => {
   console.log(encodedSvgString);
 
   return (
-    <SvgCss
-      xml={encodedSvgString}
-      width={size}
-	  height={size}
-    />
+    <>
+      <SvgCss xml={encodedSvgString} width={size} height={size} />
+      <SvgCssUri uri={encodedSvgString} width={size} height={size} />
+      <SvgXml xml={svgString} width={size} height={size} />
+    </>
   );
 });
 
