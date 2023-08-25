@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { PixelRatio } from "react-native";
-import { renderToStaticMarkup } from "react-dom/server";
+import { renderToString } from "react-dom/server";
 import Image from "react-native-remote-svg";
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
 
@@ -27,7 +27,7 @@ export interface Props {
 export const Avatar = React.memo((props: Props) => {
 	const { size } = props;
 	
-	const svgString = renderToStaticMarkup(
+	const svgString = renderToString(
 	  <AvatarReact
 		style={{
 		  width: PixelRatio.getPixelSizeForLayoutSize(size),
@@ -53,7 +53,7 @@ export const Avatar = React.memo((props: Props) => {
 export const Piece = React.memo((props: Props) => {
   const { pieceSize } = props;
 
-  const svgString = renderToStaticMarkup(<PieceReact {...props} />);
+  const svgString = renderToString(<PieceReact {...props} />);
 
   return (
     <Image
