@@ -42,11 +42,11 @@ export const Avatar = React.memo((props: Props) => {
     svgString
   )}`.toString();
 
-  console.log(encodedSvgString);
+  // console.log(encodedSvgString);
 
   return (
     <>
-      <SvgXml xml={svgString} width={'100%'} height={'100%'} />
+      <SvgXml xml={encodedSvgString} width={size} height={size} />
     </>
   );
 });
