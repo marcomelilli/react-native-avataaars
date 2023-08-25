@@ -15,9 +15,11 @@ import Image from "react-native-remote-svg";
 import { Piece as PieceReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
-    var svgString = renderToString(React.createElement("div", { style: { width: 100, height: 100, backgroundColor: 'pink' } }));
+    var svgString = renderToString(React.createElement("div", { style: { width: 100, height: 100, backgroundColor: "pink" } }));
+    var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString));
+    console.log(encodedSvgString);
     return (React.createElement(Image, { source: {
-            uri: "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString)),
+            uri: encodedSvgString,
         }, style: {
             width: size,
             height: size,
