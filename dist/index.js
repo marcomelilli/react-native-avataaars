@@ -21,7 +21,7 @@ export var Avatar = React.memo(function (props) {
             width: PixelRatio.getPixelSizeForLayoutSize(size),
             height: PixelRatio.getPixelSizeForLayoutSize(size),
         } }, props)));
-    var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString)).toString();
+    var encodedSvgString = "".concat(encodeURIComponent(svgString)).toString();
     return (React.createElement(React.Fragment, null,
         React.createElement(SvgXml, { xml: encodedSvgString, width: size, height: size })));
 });
