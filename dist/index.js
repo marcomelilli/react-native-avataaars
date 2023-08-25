@@ -13,7 +13,7 @@ import React from "react";
 import './globals.js';
 import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
-import { SvgXml } from 'react-native-svg';
+import * as Svg from 'react-native-svg';
 import { Avatar as AvatarReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
@@ -23,5 +23,5 @@ export var Avatar = React.memo(function (props) {
         } }, props)));
     var encodedSvgString = "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString));
     console.log(encodedSvgString);
-    return (React.createElement(SvgXml, { xml: encodedSvgString, width: "100%", height: "100%" }));
+    return (React.createElement(Svg.SvgXml, { xml: encodedSvgString, width: "100%", height: "100%" }));
 });
