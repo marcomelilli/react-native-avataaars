@@ -10,16 +10,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import React from "react";
-import { PixelRatio } from "react-native";
 import { renderToString } from "react-dom/server";
 import Image from "react-native-remote-svg";
-import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
+import { Piece as PieceReact } from "avataaars";
 export var Avatar = React.memo(function (props) {
     var size = props.size;
-    var svgString = renderToString(React.createElement(AvatarReact, __assign({ style: {
-            width: PixelRatio.getPixelSizeForLayoutSize(size),
-            height: PixelRatio.getPixelSizeForLayoutSize(size),
-        } }, props)));
+    var svgString = renderToString(React.createElement("div", { style: { width: 100, height: 100, backgroundColor: 'pink' } }));
     return (React.createElement(Image, { source: {
             uri: "data:image/svg+xml;utf8,".concat(encodeURIComponent(svgString)),
         }, style: {
