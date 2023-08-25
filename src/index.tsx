@@ -1,5 +1,5 @@
 import React from "react";
-import { PixelRatio } from "react-native";
+import { PixelRatio, View } from "react-native";
 import ReactDOMServer from "react-dom/server";
 import Image from "react-native-remote-svg";
 import { Avatar as AvatarReact, Piece as PieceReact } from "avataaars";
@@ -26,27 +26,28 @@ export interface Props {
 export const Avatar = React.memo((props: Props) => {
 	const { size } = props;
 	return (
-		<Image
-			source={{
-				uri: `data:image/svg+xml;utf8,${ReactDOMServer.renderToString(
-					<AvatarReact
-						style={{
-							width: PixelRatio.getPixelSizeForLayoutSize(
-								size
-							),
-							height: PixelRatio.getPixelSizeForLayoutSize(
-								size
-							)
-						}}
-						{...props}
-					/>
-				)}`
-			}}
-			style={{
-				width: size,
-				height: size
-			}}
-		/>
+		<View style={{width:100,height:100, backgroundColor:'yellow'}} />
+		// <Image
+		// 	source={{
+		// 		uri: `data:image/svg+xml;utf8,${ReactDOMServer.renderToString(
+		// 			<AvatarReact
+		// 				style={{
+		// 					width: PixelRatio.getPixelSizeForLayoutSize(
+		// 						size
+		// 					),
+		// 					height: PixelRatio.getPixelSizeForLayoutSize(
+		// 						size
+		// 					)
+		// 				}}
+		// 				{...props}
+		// 			/>
+		// 		)}`
+		// 	}}
+		// 	style={{
+		// 		width: size,
+		// 		height: size
+		// 	}}
+		// />
 	);
 });
 
